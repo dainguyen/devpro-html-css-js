@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Khoa hoc HTML co ban" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Spring, MySql, Maven" />
+    <meta name="author" content="DaiNguyen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Core</title>
+    <style>
+        #header{
+            background-color: #AEC6CF;
+            max-width: 940px;
+            margin: auto;
+            padding: 0px 30px;
+        }
+        body{
+            font: 500 12px/18px Arial;
+            margin: 0px;
+        }
+        #body{
+            max-width: 940px;
+            margin: auto;
+        }
+
+        #header nav ul li{
+            display: inline-block;
+            list-style-type: none;
+            margin: 5px;
+        }
+        a:hover{
+            color: firebrick;
+        }
+        .more:link {
+            text-decoration: none;
+        }
+        #main{
+            float: left;
+            width: 60%;
+        }
+        .category{
+            background-color: red;
+            border-radius: 10px;
+            margin-top: 12px;
+        }
+        .category img{
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+            padding: 5px;display: inline-block;
+        }
+        .category h3{
+            display: inline-block;
+            vertical-align: middle;
+            color: white;
+        }
+        #side{
+            float: right;
+            width: 38%;
+        }
+        #side .box{
+            background-color: antiquewhite;
+        }
+        #side h3{
+            background-color: darkgrey;
+            padding: 5px;
+            padding-left: 10px;
+        }
+        #side .box-content{
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+        #footer{
+            background-color: #AEC6CF;
+            max-width: 940px;
+            margin: auto;
+            padding: 10px 30px;
+            display: flex;
+        }
+        #footer_social{
+            padding-left: 20px;
+        }
+        .clear{
+            clear:both;
+            height: 10px;
+        }
+		#main .category h3:before {
+			content: ""; /* nội dung văn bản */
+			background-image: url(img/soccer.png); /* ảnh back-ground */
+			background-size: 20px 20px;
+			
+			width: 20px;
+			height: 20px;
+			
+			display: inline-block;
+			
+			vertical-align: middle;
+			margin-right: 6px;
+			margin-left: 6px;
+		}
+    </style>
+	<script type="text/javascript">
+		var c;
+		var a = 9;
+		let b = 19;
+		function _alert() {
+			alert(a+b);
+		}
+		_alert();
+		
+		//var Person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+		//Person.prototype.nationality = "English";
+		
+		function Person(first, last, age, eyecolor) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eyecolor;
+		}
+		Person.prototype.nationality = "English";
+
+		var myFather = new Person("John", "Doe", 50, "blue");
+		var myFather2 = new Person("John", "Doe", 50, "blue");
+		alert(myFather2.nationality);
+		
+	</script>
+</head>
+<body>
+    <div id="header" name="header">
+        <img src="img/house.png" width="50" height="50" title="House" alt="Home Image" style="vertical-align: middle">
+        <nav style="display: inline-block; vertical-align: middle">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#2">HTML</a></li>
+            <li><a href="#3">CSS</a></li>
+            <li><a href="#4">JavaScript</a></li>
+            <li><a href="#5">JQuery</a></li>
+        </ul>
+        </nav>
+    </div>
+    <div id="body" name="body">
+    <div id="main" name="main">
+        <div class="category">
+            <h3>Thể Thao</h3>
+        </div>
+        <div class="artical">
+            <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+            <p>(Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi của người dân lên trên cái ghế của mình…</p>
+            <div style="text-align: right"><a class="more" href="">xem tiếp...</a></div>
+        </div>
+        <div class="artical">
+            <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+            <p>(Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi của người dân lên trên cái ghế của mình…</p>
+            <div style="text-align: right"><a class="more" href="">xem tiếp...</a></div>
+        </div>
+        <div class="category">
+            <h3>Giáo Dục</h3>
+        </div>
+        <div class="artical">
+            <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+            <p>(Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi của người dân lên trên cái ghế của mình…</p>
+            <div style="text-align: right"><a class="more" href="">xem tiếp...</a></div>
+        </div>
+    </div>
+    <div id="side" name="side">
+        <div class="box">
+            <h3>Subcribe</h3>
+            <div class="box-content">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <h3>Subcribe</h3>
+            <div class="box-content">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <h3>Subcribe</h3>
+            <div class="box-content">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <h3>Subcribe</h3>
+            <div class="box-content">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <h3>Subcribe</h3>
+            <div class="box-content">
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    </div>
+    <div id="footer" name="footer">
+        <div id="footer_infor" name="footer_infor">
+            <b>Cơ quan của TW Hội Khuyến học Việt Nam</b><br>
+            Giấy phép hoạt động báo điện tử Dân trí trên Internet số 378/GP - BTTTT Hà Nội, ngày 16-09-2013.<br>
+            Tòa soạn: Số 2 (nhà 48) Giảng Võ, Quận Đống Đa, Hà Nội<br>
+            Điện thoại: 024-3736-6491. Fax: 024-3736-6490<br>
+            Email: <a href="">info@dantri.com.vn.</a> Website: <a href="">https://www.dantri.com.vn</a><br><br>
+            <i>Mọi hành động sử dụng nội dung đăng tải trên Báo điện tử Dân trí tại địa chỉ www.dantri.com.vn phải<br>
+                có sự đồng ý bằng văn bản của Báo điện tử Dân trí.</i>
+        </div>
+        <div id="footer_social" name="footer_social">
+            <div>Đơn vị quảng cáo:<br>
+                Hotline: 0942.86.11.33<br>
+                Xem bản mobile:</div>
+        </div>
+    </div>
+</body>
+</html>
